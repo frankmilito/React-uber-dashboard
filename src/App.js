@@ -1,7 +1,14 @@
 import "./App.css"
-
-function App() {
-  return <div className="App">Uber</div>
+import styled from "styled-components"
+import Dashboard from "./components/Dashboard"
+import Sidebar from "./components/Sidebar"
+export default function App() {
+  return (
+    <div className="App">
+      <Sidebar />
+      <Dashboard />
+    </div>
+  )
 }
 
-export default App
+const Div = styled.div``
