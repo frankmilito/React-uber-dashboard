@@ -4,11 +4,13 @@ import Dashboard from "./components/Dashboard"
 import Sidebar from "./components/Sidebar"
 export default function App() {
   return (
-    <div className="App">
+    <Div className="App">
       <Sidebar />
       <Dashboard />
-    </div>
+    </Div>
   )
 }
 
-const Div = styled.div``
+const Div = styled.div`
+  /* display: flex; */
+`
