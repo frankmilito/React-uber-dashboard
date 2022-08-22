@@ -49,4 +49,15 @@ const Section = styled.section`
       gap: 1rem;
     }
   }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    margin-left: 0;
+    height: 100%;
+
+    .grid {
+      .row__one,
+      .row__two {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
 `
