@@ -55,7 +55,7 @@ export default function Sidebar() {
         <div className="top">
           <div className="brand">
             <FaTaxi />
-            <span>MY TAXI</span>
+            <span>MY UBER</span>
           </div>
           <div className="toggle">
             {navbarState ? (
