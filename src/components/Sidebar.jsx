@@ -9,12 +9,46 @@ import {IoSettings} from "react-icons/io5"
 import {FiLogOut} from "react-icons/fi"
 import {GiHamburgerMenu} from "react-icons/gi"
 import {VscChromeClose} from "react-icons/vsc"
+import scrollreveal from "scrollreveal"
 
 export default function Sidebar() {
   const [currentLink, setCurrentLink] = useState(1)
   const [navbarState, setNavbarState] = useState(false)
   const html = document.querySelector("html")
   html.addEventListener("click", () => setNavbarState(false))
+
+  useEffect(() => {
+    const sr = scrollreveal({
+      origin: "left",
+      distance: "80px",
+      duration: 1000,
+      reset: false,
+    })
+    sr.reveal(
+      //   `
+      //   .brand,
+      //   .links>ul>li:nth-of-type(1),
+      //   .links>ul>li:nth-of-type(2),
+      //   .links>ul>li:nth-of-type(3),
+      //   .links>ul>li:nth-of-type(4),
+      //   .links>ul>li:nth-of-type(5),
+      //   .links>ul>li:nth-of-type(6),
+      //   .logout,
+      // `,
+      `
+          .brand,
+          .links>ul>li:nth-of-type(1),
+      .links>ul>li:nth-of-type(2),
+      .links>ul>li:nth-of-type(3),
+      .links>ul>li:nth-of-type(4),
+      .links>ul>li:nth-of-type(5),
+      .links>ul>li:nth-of-type(6),
+      .logout
+      `,
+      {opacity: 0, interval: 100}
+    )
+  }, [])
+
   return (
     <>
       <Section>
