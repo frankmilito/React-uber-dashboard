@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="title">
         <h4>Hi Franklin</h4>
         <h1>
-          Welcome to <span>MY TAXI DASHBOARD</span>
+          Welcome to <span>MY UBER DASHBOARD</span>
         </h1>
       </div>
       <div className="search">
@@ -56,5 +56,15 @@ const Nav = styled.nav`
         outline: none;
       }
     }
+  }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+  flex-direction:column;
+  .title{
+      h1{
+          span{
+              display:block;
+              margin:1rem 0;
+          }
+      }
   }
 `
